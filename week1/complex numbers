@@ -1,0 +1,40 @@
+#include<stdio.h>
+struct complex
+{
+    float real;
+    float imaginery;
+};
+struct complex add(struct complex a,struct complex b)
+{
+    struct complex c;
+    c.real=a.real+b.real;
+    c.imaginery=a.imaginery+b.imaginery;
+    return c;
+}
+struct complex getcomplex()
+{
+struct complex r;
+printf("enter the real part\n");
+scanf("%f",&r.real);
+printf("enter the imaginery part\n");
+scanf("%f",&r.imaginery);
+
+return r;
+}
+struct complex show(struct complex c)
+{
+    printf("the real part is %f\n",c.real);
+    printf("the imaginery part is %f\n",c.imaginery);
+}
+int main()
+{
+    struct complex a;
+    struct complex b;
+    struct complex c;
+    a=getcomplex();
+    b=getcomplex();
+    c=add(a,b);
+    show(c);
+    
+    return 0;
+}
