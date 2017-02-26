@@ -1,0 +1,21 @@
+#include<stdio.h> 
+4 float comp(float a,float b,float c){ 
+5 	float max=a; 
+6 	if(max<b){ 
+7 		max=b; 
+8 	} 
+9 	if(max<c){ 
+10 		max=c; 
+11 	} 
+12 	return max; 
+13 } 
+14 
+ 
+15 int main(){ 
+16 	float a,b,c; 
+17 	printf("enter three numbers:"); 
+18 	scanf("%f%f%f",&a,&b,&c); 
+19 	float x=comp(a,b,c); 
+20 	printf("the largest number is:%f",x); 
+21   return 0; 
+22 } 
