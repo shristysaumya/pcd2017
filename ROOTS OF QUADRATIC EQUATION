@@ -1,0 +1,54 @@
+#include <stdio.h> 
+3 #include <math.h> 
+4 
+ 
+5 
+ 
+6 typedef struct{ 
+7 	float real,imaginary; 
+8 }complex; 
+9 
+ 
+10 
+ 
+11 typedef struct{ 
+12 	complex r1,r2; 
+13 }roots; 
+14 
+ 
+15 roots  findroots(float a,float b,float c); 
+16 int main(){ 
+17 	roots qd; 
+18 	float a,b,c; 
+19 	printf("enter the coefficients of x^2, x and the constants:"); 
+20 	scanf("%f%f%f",&a,&b,&c); 
+21 	qd = findroots(a,b,c); 
+22 	printf("the roots of the quadratic equation are: %f + i %f and %f -i%f",qd.r1.real,qd.r1.imaginary,qd.r2.real,qd.r2.imaginary); 
+23 	return 0; 
+24 	} 
+25     roots findroots(float a,float b,float c){ 
+26 		roots qd; 
+27 		float d=b*b-4*a*c; 
+28     	if(d==0){ 
+29     	qd.r1.real=(-b/2*a); 
+30     	qd.r2.real=(-b/2*a); 
+31     	qd.r1.imaginary=0; 
+32     	qd.r2.imaginary=0; 
+33     	} 
+34     	 
+35     	else if(d>0){ 
+36 			qd.r1.real=(-b+sqrt(d))/(2*a); 
+37 			qd.r2.real=(-b-sqrt(d))/(2*a); 
+38 			qd.r1.imaginary=0; 
+39     	                qd.r2.imaginary=0; 
+40    	} 
+41     	 
+42     	else if(d<0){ 
+43     		qd.r1.real=(-b/2*a); 
+44     		qd.r1.imaginary=((sqrt(-d))/2*a); 
+45     		qd.r2.real=(-b/2*a); 
+46     		qd.r2.imaginary=((sqrt(-d))/2*a); 
+47     		 
+48     	} 
+49     	   		return qd; 
+50 } 
