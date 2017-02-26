@@ -1,0 +1,21 @@
+//addition of n numbers 
+2 #include<stdio.h> 
+3 int findsum(int n){ 
+4 	int array[n],i,sum=0; 
+5 	for(i=0;i<n;i++){ 
+6 		int j=i+1; 
+7 		printf("enter %d number:\n",j); 
+8 		scanf("%d",&array[i]); 
+9 		sum+=array[i]; 
+10 	} 
+11 	return sum; 
+12 } 
+13 
+ 
+14 int main(){ 
+15 	int n; 
+16 	printf("how many numbers do you want to add:"); 
+17 	scanf("%d",&n); 
+18 	int sum=findsum(n); 
+19 	printf("the sum is: %d",sum); 
+20 } 
