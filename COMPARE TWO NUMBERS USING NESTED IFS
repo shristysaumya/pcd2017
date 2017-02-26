@@ -1,0 +1,25 @@
+#include<stdio.h> 
+4 float comp(float a,float b){ 
+5 	if(a>b){ 
+6 		return a; 
+7 	} 
+8 	 
+9 	else{ 
+10 		if(a==b){ 
+11 			return a; 
+12 		} 
+13 		else{ 
+14 			return b; 
+15 		} 
+16 } 
+17 } 
+18 
+ 
+19 int main(){ 
+20 	float a,b; 
+21 	printf("enter two numbers:"); 
+22 	scanf("%f%f",&a,&b); 
+23 	float c=comp(a,b); 
+24 	printf("the larger number is:%f",c); 
+25 	return 0; 
+26 } 
