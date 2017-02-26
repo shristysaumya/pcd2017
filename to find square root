@@ -1,0 +1,12 @@
+#include<stdio.h> 
+2 #include<math.h> 
+3 
+ 
+4 int main(){ 
+5 	int a,b; 
+6 	printf("enter the number of which the square root is to be found"); 
+7 	scanf("%d",&a); 
+8 	b=sqrt(a); 
+9 	printf("square root of the number is:%d",b); 
+10 	return 0; 
+11 } 
