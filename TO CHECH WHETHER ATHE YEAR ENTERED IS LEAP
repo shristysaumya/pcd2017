@@ -1,0 +1,23 @@
+int main(){ 
+3     int a; 
+4     printf("enter a year for checking:"); 
+5     scanf("%d",&a); 
+6      
+7     if(a%4==0){ 
+8         if(a%100==0){ 
+9             if (a%400==0){ 
+10                 printf("it is a leap year"); 
+11             } 
+12             else{ 
+13                 printf("it is not a leap year"); 
+14             } 
+15         } 
+16             else{ 
+17                 printf("it is a leap year"); 
+18             } 
+19         } 
+20         else{ 
+21             printf("it is not a leap year"); 
+22         } 
+23         return 0; 
+24 } 
