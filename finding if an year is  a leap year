@@ -1,0 +1,56 @@
+#include<stdlib.h>
+#include<stdio.h>
+int leap(int yr)
+{
+	if(yr%400 == 0)
+	{
+		return 0;
+	}
+	else if(yr%100 == 0)
+	{
+		return 1;
+	}
+	else if(yr%4 == 0)
+	{
+		return 2;
+	}
+	else
+	{
+		return -1;
+	}
+}
+int main()
+{
+	int yr;
+	printf("Enter the year \n");
+	scanf("%d", &yr);
+	int r = leap(yr);
+	switch(r)
+	{
+		case -1 :
+		{
+			printf("%d is not a leap year \n",yr);
+			break;
+		}
+		case 0 :
+		{
+			printf("%d is a quadrenal leap year \n",yr);
+			break;
+		}
+		case 1 :
+		{
+			printf("%d is a centuary year and not a leap year \n",yr);
+			break;
+		}
+		case 2 :
+		{
+			printf("%d is a leap year \n",yr);
+			break;
+		}
+		default :
+		{
+			break;
+		}
+	}
+	return 0;
+}
